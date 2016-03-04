@@ -1,0 +1,64 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.election.androboys.election.PollingStation">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="92dp"
+        android:layout_centerInParent="true"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/div"
+            android:id="@+id/textView5" />
+        <Spinner
+            android:id="@+id/divison_spinner"
+            android:layout_width="fill_parent"
+            android:textSize="30dp"
+            android:layout_marginBottom="10dp"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/dis"
+            android:id="@+id/textView6" />
+        <Spinner
+            android:id="@+id/district_spinner"
+            android:layout_width="fill_parent"
+            android:textSize="30dp"
+            android:layout_marginBottom="10dp"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/manucipility"
+            android:id="@+id/textView7" />
+        <Spinner
+            android:id="@+id/municipility_spinner"
+            android:layout_width="fill_parent"
+            android:textSize="30dp"
+            android:layout_marginBottom="20dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:text="@string/title_search"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@drawable/search_btn_style"
+            android:id="@+id/btn_find" />
+    </LinearLayout>
+</RelativeLayout>

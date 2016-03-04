@@ -1,0 +1,46 @@
+<resources>
+
+    <!-- Election -->
+    <string name="app_name">নির্বাচন</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="app_title">নির্বাচন</string>
+    <string name="candidate">প্রার্থী</string>
+    <string name="vote">ভোট</string>
+    <string name="polling_title">ভোটকেন্দ্র অনুসন্ধান</string>
+    <string name="login_string">লগ ইন</string>
+    <string name="vote_rules">ভোটের নিয়মাবলী</string>
+
+    <!-- candidate-->
+    <string name="title_activity_candidate">প্রার্থী অনুসন্ধান</string>
+    <string name="candidate_search">প্রার্থীর নাম</string>
+    <string name="div">বিভাগ</string>
+    <string name="dis">জেলা</string>
+    <string name="manucipility">পৌরসভা</string>
+
+    <string name="title_search">অনুসন্ধান</string>
+    <string name="title_activity_candidate__ex">পদপ্রার্থীর বিবরনী</string>
+    <string name="str_candidate_name">প্রার্থীর নাম :</string>
+    <string name="str_candidate">পদপ্রার্থী :</string>
+    <string name="str_ocup">পেশা :</string>
+    <string name="str_edu">শিক্ষা :</string>
+    <string name="str_promise">নির্বাচনী প্রতিশ্রুতি :</string>
+    <string name="title_activity_polling_station">ভোটকেন্দ্র অনুসন্ধান</string>
+    <string name="title_activity_map">ভোট কেন্দ্রের মাচিত্র</string>
+
+
+    <string name="title_activity_login">প্রবেশ করুন</string>
+    <string name="str_nid">জাতীয় পরিচয়পত্র নং</string>
+    <string name="str_login">চাপুন</string>
+    <string name="str_birth">জন্ম তারিখ</string>
+    <string name="birth_hint">দিন-মাস-বছর</string>
+    <string name="title_activity_choose_candi">Choose_candi</string>
+    <string name="title_activity_ballot">Ballot</string>
+
+    <string name="str_signup">সাইন আপ</string>
+
+
+
+
+</resources>

@@ -46,13 +46,32 @@ public class Login extends AppCompatActivity {
 
         initializeAll();
 
+        btn_enter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+
+                int num= Integer.parseInt(nid.getText().toString());
+
+                String num1=birth.getText().toString();
+
+
+                new HttpAsyncTask().execute("http://seekingsoft.com/android/election/url.php?action=login&nid="+num+"&birthday="+num1+"");
+
+            }
+        });
+
         btn_signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 int num= Integer.parseInt(nid.getText().toString());
 
                 String num1=birth.getText().toString();
-                new HttpAsyncTask().execute("http://chat.alaponbd.com/sm/android/insert.php?nid="+num+"&birthday="+num1);
+
+
+
+                new HttpAsyncTask().execute("http://seekingsoft.com/android/election/url.php?action=register&nid="+num+"&birthday="+num1);
             }
         });
 
@@ -81,13 +100,7 @@ public class Login extends AppCompatActivity {
         btn_signup=(TextView) findViewById(R.id.btn_signup);
     }
 
-    public void login(View view){
 
-        int num= Integer.parseInt(nid.getText().toString());
-
-        String num1=birth.getText().toString();
-        new HttpAsyncTask().execute("http://chat.alaponbd.com/sm/android/url2.php?url=login&nid="+num+"&birthday="+num1+"");
-    }
 
     // for database connection
     private class HttpAsyncTask extends AsyncTask<String, Void, String> {
@@ -101,13 +114,13 @@ public class Login extends AppCompatActivity {
         protected void onPostExecute(String result) {
             ////Toast.makeText(getBaseContext(), "Received!", Toast.LENGTH_LONG).show();
 
-            if(result.matches("(.*)ok(.*)")) {
+            if(result.matches("(.*)Login Successfull(.*)")) {
 
                 Intent i=new Intent(Login.this,Choose_candi.class);
                 startActivity(i);
 
             }
-            else if(result.matches("(.*)no(.*)")) {
+            else if(result.matches("(.*)Login Failed(.*)")) {
                 Toast.makeText(getBaseContext(), "Login Failed", Toast.LENGTH_SHORT).show();
             }
 
@@ -133,7 +146,7 @@ public class Login extends AppCompatActivity {
 //                Toast.makeText(getBaseContext(), "Login Failed" + result, Toast.LENGTH_SHORT).show();
 //            }
 
-           ////// nid.setText(result);
+            ////// nid.setText(result);
 
             ///result = result.replace("<br>", "\n");
 //            result_set.setText(result);

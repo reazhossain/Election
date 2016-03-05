@@ -223,9 +223,11 @@ private void district_method(){
 
     private void searching(){
         btn_search.setOnClickListener(new View.OnClickListener() {
-            String str=search_box.getText().toString();
+            String      str;
             @Override
             public void onClick(View v) {
+                     str=search_box.getText().toString();
+
 
                 new HttpAsyncTask().execute("http://seekingsoft.com/android/election/url.php?action=candidate&searchName="+str);
 
@@ -248,7 +250,7 @@ private void district_method(){
 
 
 
-            txt_result_show.setText("\n"+ result+"\n");
+            txt_result_show.setText(result);
 
             /////result = result.replace("<br>", "\n");
             ////result_set.setText(result);
@@ -288,7 +290,7 @@ private void district_method(){
         String line = "";
         String result = "";
         while((line = bufferedReader.readLine()) != null)
-            result += line;
+            result = result +"\n" + line;
 
         inputStream.close();
         return result;

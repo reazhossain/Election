@@ -124,7 +124,7 @@ public class Login extends AppCompatActivity {
                 Toast.makeText(getBaseContext(), "Login Failed", Toast.LENGTH_SHORT).show();
             }
 
-            else if(result.matches("(.*)inserted(.*)")) {
+            else if(result.matches("(.*)Registration Successfull(.*)")) {
                 Toast.makeText(getBaseContext(), "Registration Successful", Toast.LENGTH_SHORT).show();
             }
 

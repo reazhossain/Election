@@ -174,7 +174,7 @@ private void district_method(){
                             dis="Dhaka";
                            ///// new HttpAsyncTask().execute("http://chat.alaponbd.com/sm/android/url2.php?url=candidate");
 
-                            new HttpAsyncTask().execute("http://chat.alaponbd.com/sm/android/url2.php?url=canditatelist&muni="+municipility+"&dis="+dis);
+                            new HttpAsyncTask().execute("http://seekingsoft.com/android/election/url.php?action=canditatelist&muni="+municipility+"&dis="+dis);
 
                         }
                         else if (pos == 2) {
@@ -184,7 +184,7 @@ private void district_method(){
                             dis="Kushtia";
 
 
-                            new HttpAsyncTask().execute("http://chat.alaponbd.com/sm/android/url2.php?url=canditatelist&muni="+municipility+"&dis="+dis);
+                            new HttpAsyncTask().execute("http://seekingsoft.com/android/election/url.php?action=canditatelist&muni="+municipility+"&dis="+dis);
 
                             ///////new HttpAsyncTask().execute("http://chat.alaponbd.com/sm/android/url2.php?url=canditatelist");
 
@@ -227,7 +227,7 @@ private void district_method(){
             @Override
             public void onClick(View v) {
 
-                new HttpAsyncTask().execute("http://chat.alaponbd.com/sm/android/url2.php?url=canditate&searchName="+str);
+                new HttpAsyncTask().execute("http://seekingsoft.com/android/election/url.php?action=canditate&searchName="+str);
 
             }
         });

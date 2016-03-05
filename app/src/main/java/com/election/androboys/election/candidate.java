@@ -174,7 +174,7 @@ private void district_method(){
                             dis="Dhaka";
                            ///// new HttpAsyncTask().execute("http://chat.alaponbd.com/sm/android/url2.php?url=candidate");
 
-                            new HttpAsyncTask().execute("http://seekingsoft.com/android/election/url.php?action=canditatelist&muni="+municipility+"&dis="+dis);
+                            new HttpAsyncTask().execute("http://seekingsoft.com/android/election/url.php?action=candidatelist&muni="+municipility);
 
                         }
                         else if (pos == 2) {
@@ -184,7 +184,7 @@ private void district_method(){
                             dis="Kushtia";
 
 
-                            new HttpAsyncTask().execute("http://seekingsoft.com/android/election/url.php?action=canditatelist&muni="+municipility+"&dis="+dis);
+                            new HttpAsyncTask().execute("http://seekingsoft.com/android/election/url.php?action=candidatelist&muni="+municipility);
 
                             ///////new HttpAsyncTask().execute("http://chat.alaponbd.com/sm/android/url2.php?url=canditatelist");
 
@@ -227,7 +227,7 @@ private void district_method(){
             @Override
             public void onClick(View v) {
 
-                new HttpAsyncTask().execute("http://seekingsoft.com/android/election/url.php?action=canditate&searchName="+str);
+                new HttpAsyncTask().execute("http://seekingsoft.com/android/election/url.php?action=candidate&searchName="+str);
 
             }
         });
@@ -246,43 +246,9 @@ private void district_method(){
         protected void onPostExecute(String result) {
             ////Toast.makeText(getBaseContext(), "Received!", Toast.LENGTH_LONG).show();
 
-            String test="     {\n" +
-                    "              \"contacts\":";
-            String test2="}";
-            String total = ""+test+""+result+""+test2;
-
-            JSONArray contacts = null;
-            JSONObject jsonObj = null;
-            try {
-                jsonObj = new JSONObject(total);
-                contacts = jsonObj.getJSONArray(TAG_CONTACTS);
-
-                String total_data = "";
-
-                for (int i = 0; i < contacts.length(); i++) {
-                    JSONObject c = contacts.getJSONObject(i);
-
-                    String Name1 = c.getString(Candidate);
-                    String Municipality1= c.getString(Municipality);
-                    String District1 = c.getString(District);
 
 
-                    ///String id = c.getString(Candidate);
-
-
-                    data = "Name:"+Name1+"\nMunicipality:"+Municipality1+"\nDistrict:"+District1+"\n\n";
-
-                    total_data = total_data + data;
-
-                    txt_result_show.setText("\n"+ total_data+"\n");
-
-                }
-
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
-
-
+            txt_result_show.setText("\n"+ result+"\n");
 
             /////result = result.replace("<br>", "\n");
             ////result_set.setText(result);

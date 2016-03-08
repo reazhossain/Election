@@ -87,7 +87,7 @@
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="@string/login_string"
                 android:textColor="#fefffd"
-                android:id="@+id/textView3" />
+                android:id="@+id/txtLogin" />
 
             <TextView
                 android:layout_width="wrap_content"

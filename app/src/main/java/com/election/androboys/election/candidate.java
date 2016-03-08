@@ -48,7 +48,7 @@ public class candidate extends AppCompatActivity {
     Spinner district_spinner;
     Spinner municipility_spinner;
 
-    TextView result_set;
+
     EditText search_box;
     TextView btn_find;
     TextView txt_result_show;
@@ -210,7 +210,7 @@ private void district_method(){
         division_spinner= (Spinner) findViewById(R.id.divison_spinner);
         district_spinner= (Spinner) findViewById(R.id.district_spinner);
         municipility_spinner= (Spinner) findViewById(R.id.municipility_spinner);
-        result_set= (TextView) findViewById(R.id.txt_result_show);
+
         search_box= (EditText) findViewById(R.id.txt_search);
         btn_find=(TextView) findViewById(R.id.btn_find);
 
@@ -230,6 +230,8 @@ private void district_method(){
 
 
                 new HttpAsyncTask().execute("http://seekingsoft.com/android/election/url.php?action=candidate&searchName="+str);
+
+
 
             }
         });

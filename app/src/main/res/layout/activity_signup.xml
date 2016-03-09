@@ -53,38 +53,28 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
+
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="@string/manucipility"
-            android:id="@+id/manucipility" />
-
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:hint="@string/birth_hint"
-            android:gravity="center"
-            android:id="@+id/dis"
-            />
-
-
+            android:text="@string/dis"
+            android:id="@+id/textView6" />
+        <Spinner
+            android:id="@+id/district_spinner"
+            android:layout_width="fill_parent"
+            android:textSize="30dp"
+            android:layout_marginBottom="10dp"
+            android:layout_height="wrap_content" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="@string/dis"
-            android:id="@+id/textView16" />
-
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:hint="@string/birth_hint"
-            android:gravity="center"
-            android:id="@+id/municipility"
-
-            />
+            android:text="@string/manucipility"
+            android:id="@+id/textView7" />
+        <Spinner
+            android:id="@+id/municipility_spinner"
+            android:layout_width="fill_parent"
+            android:textSize="30dp"
+            android:layout_marginBottom="20dp"
+            android:layout_height="wrap_content" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

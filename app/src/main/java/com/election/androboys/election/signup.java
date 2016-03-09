@@ -3,7 +3,10 @@ package com.election.androboys.election;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import android.content.Intent;
@@ -35,16 +38,22 @@ public class signup extends AppCompatActivity {
 
     EditText nid;
     EditText birth;
-    EditText dis;
-    EditText municipility;
+    Spinner district_spinner;
+    Spinner municipility_spinner;
 
     TextView btn_enter;
     TextView btn_signup;
+
+    String district,muni;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
+
+        initializeAll();
+        district_method();
+        municipility_method();
 
 
 
@@ -56,8 +65,7 @@ public class signup extends AppCompatActivity {
                 int num = Integer.parseInt(nid.getText().toString());
                 String num1 = birth.getText().toString();
 
-                String district = dis.getText().toString();
-                String muni = municipility.getText().toString();
+
 
 
                 new HttpAsyncTask().execute("http://seekingsoft.com/android/election/url.php?action=register&nid=" + num + "&birthday=" + num1+"&muni=" + muni+"&dis=" + district);
@@ -72,8 +80,8 @@ public class signup extends AppCompatActivity {
         nid= (EditText) findViewById(R.id.txt_nid);
         birth=(EditText) findViewById(R.id.txt_birth);
 
-        dis= (EditText) findViewById(R.id.dis);
-        municipility=(EditText) findViewById(R.id.municipility);
+        district_spinner= (Spinner) findViewById(R.id.district_spinner);
+        municipility_spinner= (Spinner) findViewById(R.id.municipility_spinner);
 
 
         btn_enter= (TextView) findViewById(R.id.btn_enter);
@@ -172,4 +180,63 @@ public class signup extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+
+
+
+
+
+
+    //for district
+    private void district_method(){
+        String[] district_item= new String[]{"ঢাকা"};
+        ArrayAdapter<String> district_Adapter=new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item,district_item);
+        district_spinner.setAdapter(district_Adapter);
+        district_spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view,
+                                       final int position, long id) {
+
+
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                // TODO Auto-generated method stub
+            }
+        });
+    }
+
+
+    //for district
+    private void municipility_method(){
+        String[] municipility_item= new String[]{"- - - - - -","সাভার","দোহার"};
+        ArrayAdapter<String> municipility_Adapter=new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item,municipility_item);
+        municipility_spinner.setAdapter(municipility_Adapter);
+        municipility_spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view,
+                                       final int position, long id) {
+
+                if (position==1){
+                    muni="savar";
+                    district="Dhaka";
+                }
+                else if(position==2){
+                    muni="dohar";
+                    district="Dhaka";
+                }
+
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                // TODO Auto-generated method stub
+            }
+        });
+    }
+
+
 }

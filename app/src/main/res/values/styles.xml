@@ -5,4 +5,15 @@
         <!-- Customize your theme here. -->
     </style>
 
+    <!-- Unused  Start-->
+    <style name="MySpinnerLook" parent="@android:style/TextAppearance.Widget.TextView.SpinnerItem">
+        <item name="android:textSize">22sp</item>
+    </style>
+    <style name="spinnerDropDownItemStyle">
+        <item name="android:padding">20dp</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+    <!-- Unused  End-->
+
 </resources>

@@ -38,13 +38,14 @@ public class Login extends AppCompatActivity {
     EditText birth;
     TextView btn_enter;
     TextView btn_signup;
+    String num,num1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-
+       /// num = Integer.parseInt(nid.getText().toString());
 
         initializeAll();
 
@@ -52,10 +53,8 @@ public class Login extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-
-                int num = Integer.parseInt(nid.getText().toString());
-
-                String num1 = birth.getText().toString();
+                num1 = birth.getText().toString();
+                num = nid.getText().toString();
 
 
                 new HttpAsyncTask().execute("http://seekingsoft.com/android/election/url.php?action=login&nid=" + num + "&birthday=" + num1 + "");
@@ -109,10 +108,10 @@ public class Login extends AppCompatActivity {
                     ///Intent i = new Intent(Login.this, Ballot.class);
                    ///startActivity(i);
 
-                    int num = Integer.parseInt(nid.getText().toString());
+
 
                     Intent i = new Intent(getApplicationContext(), Ballot.class);
-                    i.putExtra("nid",+num);
+                    i.putExtra("nid",""+num);
                     startActivity(i);
 
 

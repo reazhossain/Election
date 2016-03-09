@@ -104,8 +104,8 @@ public class Login extends AppCompatActivity {
 
                 if(result.matches("(.*)savar(.*)")) {
 
-                    ///Intent i = new Intent(Login.this, Ballot1.class);
-                   /// startActivity(i);
+                    Intent i = new Intent(Login.this, Ballot.class);
+                   startActivity(i);
                 }
                 else
                 {

@@ -179,11 +179,6 @@ public class signup extends AppCompatActivity {
     }
 
 
-
-
-
-
-
     //for district
     private void district_method(){
         String[] district_item= new String[]{"ঢাকা"};

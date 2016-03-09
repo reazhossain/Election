@@ -54,10 +54,7 @@ public class candidate extends AppCompatActivity {
     TextView txt_result_show;
     ImageView btn_search;
 
-    private static final String TAG_CONTACTS = "contacts";
-    private static final String Candidate = "CandidateNameBn";
-    private static final String Municipality = "Municipality";
-    private static final String District = "District";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

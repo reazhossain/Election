@@ -68,7 +68,13 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".Election"></meta-data>
         </activity>
-        <activity android:name=".signup"></activity>
+        <activity android:name=".signup"
+            android:label="SignUp"
+            >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Election"></meta-data>
+        </activity>
     </application>
 
 </manifest>

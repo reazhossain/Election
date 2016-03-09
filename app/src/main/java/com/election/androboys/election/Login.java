@@ -62,18 +62,7 @@ public class Login extends AppCompatActivity {
             }
         });
 
-        btn_signup.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                int num= Integer.parseInt(nid.getText().toString());
 
-                String num1=birth.getText().toString();
-
-
-
-                new HttpAsyncTask().execute("http://seekingsoft.com/android/election/url.php?action=register&nid="+num+"&birthday="+num1);
-            }
-        });
 
 
 //      btn_enter.setOnClickListener(new View.OnClickListener() {

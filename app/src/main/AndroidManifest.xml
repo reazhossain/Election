@@ -24,57 +24,58 @@
             android:label="@string/title_activity_candidate">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".Election"></meta-data>
+                android:value=".Election" />
         </activity>
         <activity
             android:name=".candidate_Ex"
             android:label="@string/title_activity_candidate__ex">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".Election"></meta-data>
+                android:value=".Election" />
         </activity>
         <activity
             android:name=".PollingStation"
             android:label="@string/title_activity_polling_station">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".Election"></meta-data>
+                android:value=".Election" />
         </activity>
         <activity
             android:name=".Map"
             android:label="@string/title_activity_map">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".Election"></meta-data>
+                android:value=".Election" />
         </activity>
         <activity
             android:name=".Login"
             android:label="@string/title_activity_login">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".Election"></meta-data>
+                android:value=".Election" />
         </activity>
         <activity
             android:name=".Choose_candi"
             android:label="@string/title_activity_choose_candi">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".Election"></meta-data>
+                android:value=".Election" />
         </activity>
         <activity
             android:name=".Ballot"
             android:label="@string/title_activity_ballot">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".Election"></meta-data>
+                android:value=".Election" />
         </activity>
-        <activity android:name=".signup"
-            android:label="SignUp"
-            >
+        <activity
+            android:name=".signup"
+            android:label="SignUp">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".Election"></meta-data>
+                android:value=".Election" />
         </activity>
+        <activity android:name=".Ballot2"></activity>
     </application>
 
 </manifest>

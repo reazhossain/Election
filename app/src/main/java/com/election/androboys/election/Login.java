@@ -72,16 +72,6 @@ public class Login extends AppCompatActivity {
         });
 
 
-//      btn_enter.setOnClickListener(new View.OnClickListener() {
-//           @Override
-//
-//            //made by tanjil
-//
-//            public void onClick(View v) {
-//
-//                new HttpAsyncTask().execute("http://chat.alaponbd.com/sm/android/url2.php?url=login&nid=Nid_value&birthday=getbd_value");
-//            }
-//        });
 
 
 

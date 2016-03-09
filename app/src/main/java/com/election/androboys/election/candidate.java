@@ -37,7 +37,7 @@ import org.json.JSONObject;
 
 public class candidate extends AppCompatActivity {
 
-//    for database
+    //    for database
     String query = "";
     String url ="";
     String data="";
@@ -86,9 +86,9 @@ public class candidate extends AppCompatActivity {
     }
 
 
-//    For division Spinner work
+    //    For division Spinner work
     private void division_method(){
-        String[] division_item= new String[]{"- - - - - -","ঢাকা","সিলেট","চট্টগ্রাম","খুলনা", "রাজশাহী", "রংপুর", "বরিশাল"};
+        String[] division_item= new String[]{"ঢাকা"};
         ArrayAdapter<String> division_Adapter=new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item,division_item);
         division_spinner.setAdapter(division_Adapter);
 
@@ -108,52 +108,52 @@ public class candidate extends AppCompatActivity {
     }
 
 
-//for district
-private void district_method(){
-    String[] district_item= new String[]{"- - - - - -","ঢাকা","কুষ্টিয়া"};
-    ArrayAdapter<String> district_Adapter=new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item,district_item);
-    district_spinner.setAdapter(district_Adapter);
-    district_spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-        @Override
-        public void onItemSelected(AdapterView<?> parent, View view,
-                                   final int position, long id) {
+    //for district
+    private void district_method(){
+        String[] district_item= new String[]{"ঢাকা"};
+        ArrayAdapter<String> district_Adapter=new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item,district_item);
+        district_spinner.setAdapter(district_Adapter);
+        district_spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view,
+                                       final int position, long id) {
 
-            btn_find.setOnClickListener(new View.OnClickListener() {
-                int pos=position;
-                @Override
-                public void onClick(View v) {
-                    if (pos == 1) {
+                btn_find.setOnClickListener(new View.OnClickListener() {
+                    int pos=position;
+                    @Override
+                    public void onClick(View v) {
+                        if (pos == 1) {
 
 
-                        ///new HttpAsyncTask().execute("http://chat.alaponbd.com/sm/android/url2.php?url=canditatelist");
+                            ///new HttpAsyncTask().execute("http://chat.alaponbd.com/sm/android/url2.php?url=canditatelist");
 
-                        ////new HttpAsyncTask().execute("http://chat.alaponbd.com/sm/android/url2.php?url=candidate");
+                            ////new HttpAsyncTask().execute("http://chat.alaponbd.com/sm/android/url2.php?url=candidate");
+                        }
+                        if (pos == 2) {
+
+
+
+
+                            //////new HttpAsyncTask().execute("http://chat.alaponbd.com/sm/android/url2.php?url=canditatelist");
+
+                            ////// new HttpAsyncTask().execute("http://chat.alaponbd.com/sm/android/url2.php?url=canditatelist");
+
+                        }
+
                     }
-                    if (pos == 2) {
+                });
+            }
 
-
-
-
-                        //////new HttpAsyncTask().execute("http://chat.alaponbd.com/sm/android/url2.php?url=canditatelist");
-
-                       ////// new HttpAsyncTask().execute("http://chat.alaponbd.com/sm/android/url2.php?url=canditatelist");
-
-                    }
-
-                }
-            });
-        }
-
-        @Override
-        public void onNothingSelected(AdapterView<?> parent) {
-            // TODO Auto-generated method stub
-        }
-    });
-}
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                // TODO Auto-generated method stub
+            }
+        });
+    }
 
     //for district
     private void municipility_method(){
-        String[] municipility_item= new String[]{"- - - - - -","সাভার","ভেড়ামারা"};
+        String[] municipility_item= new String[]{"- - - - - -","সাভার","দোহার"};
         ArrayAdapter<String> municipility_Adapter=new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item,municipility_item);
         municipility_spinner.setAdapter(municipility_Adapter);
         municipility_spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -172,7 +172,7 @@ private void district_method(){
                         if (pos == 1) {
                             municipility="savar";
                             dis="Dhaka";
-                           ///// new HttpAsyncTask().execute("http://chat.alaponbd.com/sm/android/url2.php?url=candidate");
+                            ///// new HttpAsyncTask().execute("http://chat.alaponbd.com/sm/android/url2.php?url=candidate");
 
                             new HttpAsyncTask().execute("http://seekingsoft.com/android/election/url.php?action=candidatelist&muni="+municipility);
 
@@ -226,7 +226,7 @@ private void district_method(){
             String      str;
             @Override
             public void onClick(View v) {
-                     str=search_box.getText().toString();
+                str=search_box.getText().toString();
 
 
                 new HttpAsyncTask().execute("http://seekingsoft.com/android/election/url.php?action=candidate&searchName="+str);

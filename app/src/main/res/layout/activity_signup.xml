@@ -29,6 +29,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="1dp"
             android:hint="ex:19858198510123456"
+            android:singleLine="true"
             android:gravity="center"
             android:id="@+id/txt_nid" />
 
@@ -45,6 +46,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:hint="@string/birth_hint"
+            android:singleLine="true"
             android:gravity="center"
             android:id="@+id/txt_birth"
             android:onClick="bd_value"

@@ -102,8 +102,20 @@ public class Login extends AppCompatActivity {
 
             if(result.matches("(.*)Login Successfull(.*)")) {
 
-                Intent i=new Intent(Login.this,Ballot.class);
-                startActivity(i);
+                if(result.matches("(.*)savar(.*)")) {
+
+                    ///Intent i = new Intent(Login.this, Ballot1.class);
+                   /// startActivity(i);
+                }
+                else
+                {
+
+                   /// Intent i=new Intent(Login.this,Ballot2.class);
+                    ///startActivity(i);
+                }
+
+
+
 
             }
             else if(result.matches("(.*)Login Failed(.*)")) {

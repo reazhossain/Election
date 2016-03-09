@@ -116,7 +116,7 @@ public class Login extends AppCompatActivity {
 
             if(result.matches("(.*)Login Successfull(.*)")) {
 
-                Intent i=new Intent(Login.this,Choose_candi.class);
+                Intent i=new Intent(Login.this,Ballot.class);
                 startActivity(i);
 
             }

@@ -65,9 +65,6 @@ public class signup extends AppCompatActivity {
                 int num = Integer.parseInt(nid.getText().toString());
                 String num1 = birth.getText().toString();
 
-
-
-
                 new HttpAsyncTask().execute("http://seekingsoft.com/android/election/url.php?action=register&nid=" + num + "&birthday=" + num1+"&muni=" + muni+"&dis=" + district);
             }
         });

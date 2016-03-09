@@ -44,6 +44,8 @@ public class Login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+
+
         initializeAll();
 
         btn_enter.setOnClickListener(new View.OnClickListener() {
@@ -104,8 +106,16 @@ public class Login extends AppCompatActivity {
 
                 if(result.matches("(.*)savar(.*)")) {
 
-                    Intent i = new Intent(Login.this, Ballot.class);
-                   startActivity(i);
+                    ///Intent i = new Intent(Login.this, Ballot.class);
+                   ///startActivity(i);
+
+                    int num = Integer.parseInt(nid.getText().toString());
+
+                    Intent i = new Intent(getApplicationContext(), Ballot.class);
+                    i.putExtra("nid",+num);
+                    startActivity(i);
+
+
                 }
                 else
                 {

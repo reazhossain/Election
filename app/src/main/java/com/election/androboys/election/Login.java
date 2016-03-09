@@ -119,8 +119,9 @@ public class Login extends AppCompatActivity {
                 else
                 {
 
-                   /// Intent i=new Intent(Login.this,Ballot2.class);
-                    ///startActivity(i);
+                    Intent i = new Intent(getApplicationContext(), Ballot2.class);
+                    i.putExtra("nid",""+num);
+                    startActivity(i);
                 }
 
 

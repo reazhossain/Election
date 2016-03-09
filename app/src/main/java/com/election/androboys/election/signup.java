@@ -61,8 +61,8 @@ public class signup extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-
-                int num = Integer.parseInt(nid.getText().toString());
+                String num = nid.getText().toString();
+             //// String num = Integer.parseInt(nid.getText().toString());
                 String num1 = birth.getText().toString();
 
                 new HttpAsyncTask().execute("http://seekingsoft.com/android/election/url.php?action=register&nid=" + num + "&birthday=" + num1+"&muni=" + muni+"&dis=" + district);
@@ -193,7 +193,6 @@ public class signup extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view,
                                        final int position, long id) {
-
 
 
             }

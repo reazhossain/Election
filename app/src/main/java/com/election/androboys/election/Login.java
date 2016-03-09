@@ -72,16 +72,6 @@ public class Login extends AppCompatActivity {
         });
 
 
-//      btn_enter.setOnClickListener(new View.OnClickListener() {
-//           @Override
-//
-//            //made by tanjil
-//
-//            public void onClick(View v) {
-//
-//                new HttpAsyncTask().execute("http://chat.alaponbd.com/sm/android/url2.php?url=login&nid=Nid_value&birthday=getbd_value");
-//            }
-//        });
 
 
 
@@ -112,7 +102,7 @@ public class Login extends AppCompatActivity {
 
             if(result.matches("(.*)Login Successfull(.*)")) {
 
-                Intent i=new Intent(Login.this,Choose_candi.class);
+                Intent i=new Intent(Login.this,Ballot.class);
                 startActivity(i);
 
             }

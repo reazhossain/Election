@@ -51,13 +51,12 @@ public class Login extends AppCompatActivity {
             public void onClick(View v) {
 
 
+                int num = Integer.parseInt(nid.getText().toString());
 
-                int num= Integer.parseInt(nid.getText().toString());
-
-                String num1=birth.getText().toString();
+                String num1 = birth.getText().toString();
 
 
-                new HttpAsyncTask().execute("http://seekingsoft.com/android/election/url.php?action=login&nid="+num+"&birthday="+num1+"");
+                new HttpAsyncTask().execute("http://seekingsoft.com/android/election/url.php?action=login&nid=" + num + "&birthday=" + num1 + "");
 
             }
         });
@@ -65,13 +64,10 @@ public class Login extends AppCompatActivity {
         btn_signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int num= Integer.parseInt(nid.getText().toString());
 
-                String num1=birth.getText().toString();
+                Intent i=new Intent(Login.this,signup.class);
+                startActivity(i);
 
-
-
-                new HttpAsyncTask().execute("http://seekingsoft.com/android/election/url.php?action=register&nid="+num+"&birthday="+num1);
             }
         });
 

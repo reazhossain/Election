@@ -60,7 +60,7 @@ public class signup extends AppCompatActivity {
                 String muni = municipility.getText().toString();
 
 
-                new HttpAsyncTask().execute("http://seekingsoft.com/android/election/url.php?action=register&nid=" + num + "&birthday=" + num1+"&muni=" + muni+"&dis=" + dis);
+                new HttpAsyncTask().execute("http://seekingsoft.com/android/election/url.php?action=register&nid=" + num + "&birthday=" + num1+"&muni=" + muni+"&dis=" + district);
             }
         });
 

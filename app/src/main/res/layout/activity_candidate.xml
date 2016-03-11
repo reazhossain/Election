@@ -105,23 +105,25 @@
                 android:id="@+id/btn_find" />
         </LinearLayout>
 
-            <ScrollView
-                android:layout_width="match_parent"
-                android:layout_marginLeft="10dp"
-                android:layout_height="match_parent">
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text=""
             android:id="@+id/txt_result_show" />
-                </LinearLayout>
-            </ScrollView>
+
+
+
+        <ListView
+            android:layout_marginLeft="15dp"
+            android:id="@+id/mobile_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+        </ListView>
+
+    </LinearLayout>
 
     </LinearLayout>
 </RelativeLayout>

@@ -13,13 +13,16 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 
 //for http client
 import org.apache.http.HttpResponse;
@@ -37,6 +40,10 @@ import org.json.JSONObject;
 
 public class candidate extends AppCompatActivity {
 
+    /////////////////Limit 100ta array value, change korle pb nai
+    String[] result2;
+
+    int ary;  /////array variable
     //    for database
     String query = "";
     String url ="";
@@ -66,6 +73,8 @@ public class candidate extends AppCompatActivity {
         municipility_method();
         searching();
 
+        result2= new String[100];
+
         search_box.setOnTouchListener(new View.OnTouchListener() {
 
             @Override
@@ -76,6 +85,45 @@ public class candidate extends AppCompatActivity {
                 return false;
             }
         });
+
+    }
+
+    public void Reaz()
+    {
+
+            /// TextView t1 = (TextView) findViewById(R.id.t1);
+            ArrayList results = new ArrayList();
+
+            for (int i = 1; i <= ary; i++) {
+
+               //// txt_result_show.setText(result2[i]);
+
+                results.add(result2[i]);
+            }
+
+            ArrayAdapter adapter = new ArrayAdapter<String>(this, R.layout.activity_listview, results);
+            ListView listView = (ListView) findViewById(R.id.mobile_list);
+           listView.setAdapter(adapter);
+
+
+            listView.setOnItemClickListener(
+                    new AdapterView.OnItemClickListener() {
+                        @Override
+                        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                            String food = String.valueOf(parent.getItemAtPosition(position));
+
+                            Intent i = new Intent(getApplicationContext(), candidate_Ex.class);
+                            i.putExtra("name",""+food);
+                            startActivity(i);
+
+
+
+
+                            Toast.makeText(candidate.this, food, Toast.LENGTH_LONG).show();
+                        }
+                    }
+            );
 
 
 
@@ -120,19 +168,11 @@ public class candidate extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         if (pos == 1) {
-
-
                             ///new HttpAsyncTask().execute("http://chat.alaponbd.com/sm/android/url2.php?url=canditatelist");
-
                             ////new HttpAsyncTask().execute("http://chat.alaponbd.com/sm/android/url2.php?url=candidate");
                         }
                         if (pos == 2) {
-
-
-
-
                             //////new HttpAsyncTask().execute("http://chat.alaponbd.com/sm/android/url2.php?url=canditatelist");
-
                             ////// new HttpAsyncTask().execute("http://chat.alaponbd.com/sm/android/url2.php?url=canditatelist");
 
                         }
@@ -168,7 +208,6 @@ public class candidate extends AppCompatActivity {
                     public void onClick(View v) {
                         if (pos == 1) {
                             municipility="savar";
-                            dis="Dhaka";
                             ///// new HttpAsyncTask().execute("http://chat.alaponbd.com/sm/android/url2.php?url=candidate");
 
                             new HttpAsyncTask().execute("http://seekingsoft.com/android/election/url.php?action=candidatelist&muni="+municipility);
@@ -177,10 +216,7 @@ public class candidate extends AppCompatActivity {
                         else if (pos == 2) {
 
 
-                            municipility="Bheramara";
-                            dis="Kushtia";
-
-
+                            municipility="dohar";
                             new HttpAsyncTask().execute("http://seekingsoft.com/android/election/url.php?action=candidatelist&muni="+municipility);
 
                             ///////new HttpAsyncTask().execute("http://chat.alaponbd.com/sm/android/url2.php?url=canditatelist");
@@ -224,11 +260,7 @@ public class candidate extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 str=search_box.getText().toString();
-
-
                 new HttpAsyncTask().execute("http://seekingsoft.com/android/election/url.php?action=candidate&searchName="+str);
-
-
 
             }
         });
@@ -245,19 +277,23 @@ public class candidate extends AppCompatActivity {
         // onPostExecute displays the results of the AsyncTask.
         @Override
         protected void onPostExecute(String result) {
+
+
+
+            ///txt_result_show.setText(result2[2]);
+
+
+          Reaz();
+
             ////Toast.makeText(getBaseContext(), "Received!", Toast.LENGTH_LONG).show();
-
-
-
-            txt_result_show.setText(result);
-
+            ////txt_result_show.setText(result);
             /////result = result.replace("<br>", "\n");
             ////result_set.setText(result);
 //            etResponse.setText("\n\n\n\n"+ result);
         }
     }
     ////////////////////Nothing to edit below
-    public static String GET(String url){
+    public String GET(String url){
         InputStream inputStream = null;
         String result = "";
         try {
@@ -284,13 +320,22 @@ public class candidate extends AppCompatActivity {
         return result;
     }
 
-    private static String convertInputStreamToString(InputStream inputStream) throws IOException {
+    private String convertInputStreamToString(InputStream inputStream) throws IOException {
         BufferedReader bufferedReader = new BufferedReader( new InputStreamReader(inputStream));
         String line = "";
         String result = "";
-        while((line = bufferedReader.readLine()) != null)
-            result = result +"\n" + line;
 
+        ary =0;
+
+        while((line = bufferedReader.readLine()) != null) {
+            result = result + "\n" + line;
+
+                        /////Important : porita line k akta array te nia rakhbe
+            ary = ary + 1;
+            ///TextView t1 = (TextView) findViewById(R.id.t1);
+            // /t1.setText(line);
+            result2[ary] = line;
+        }
         inputStream.close();
         return result;
     }

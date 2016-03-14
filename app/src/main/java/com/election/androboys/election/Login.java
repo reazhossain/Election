@@ -53,10 +53,13 @@ public class Login extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                num1 = birth.getText().toString();
+
                 num = nid.getText().toString();
+                num1 = birth.getText().toString();
 
-
+                if(num.isEmpty() || num1.isEmpty())
+                    Toast.makeText(getBaseContext(), "Please insert your NID and Birthday", Toast.LENGTH_SHORT).show();
+                    else
                 new HttpAsyncTask().execute("http://seekingsoft.com/android/election/url.php?action=login&nid=" + num + "&birthday=" + num1 + "");
 
             }
@@ -133,11 +136,11 @@ public class Login extends AppCompatActivity {
             }
 
             else if(result.matches("(.*)Registration Successfull(.*)")) {
-                Toast.makeText(getBaseContext(), "Registration Successful", Toast.LENGTH_SHORT).show();
+                ///Toast.makeText(getBaseContext(), "Registration Successful", Toast.LENGTH_SHORT).show();
             }
 
             else {
-                Toast.makeText(getBaseContext(), "Problem In Registration", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getBaseContext(), "Error #01", Toast.LENGTH_SHORT).show();
             }
 
 

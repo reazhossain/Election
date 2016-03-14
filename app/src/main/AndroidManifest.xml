@@ -75,7 +75,12 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".Election" />
         </activity>
-        <activity android:name=".Ballot2"></activity>
+        <activity android:name=".Ballot2">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Election" />
+        </activity>
     </application>
 
 </manifest>

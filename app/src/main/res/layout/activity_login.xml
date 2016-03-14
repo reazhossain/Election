@@ -49,7 +49,6 @@
             android:singleLine="true"
             android:gravity="center"
             android:id="@+id/txt_birth"
-            android:onClick="bd_value"
             />
 
         <TextView

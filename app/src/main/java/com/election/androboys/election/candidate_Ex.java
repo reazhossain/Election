@@ -69,16 +69,9 @@ public class candidate_Ex extends AppCompatActivity {
         @Override
         protected void onPostExecute(String result) {
 
-
-
-
                txt_result_show.setText(result);
 
-
-
-
             //////Toast.makeText(getBaseContext(), "" + result, Toast.LENGTH_LONG).show();
-
         }
     }
 

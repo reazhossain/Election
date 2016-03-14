@@ -44,12 +44,10 @@
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
             android:hint="@string/birth_hint"
             android:singleLine="true"
             android:gravity="center"
             android:id="@+id/txt_birth"
-            android:onClick="bd_value"
             />
 
         <TextView

@@ -1,5 +1,7 @@
 package com.election.androboys.election;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
@@ -131,7 +133,14 @@ public class Ballot extends AppCompatActivity {
         @Override
         protected void onPostExecute(String result) {
 
-            Toast.makeText(getBaseContext(), ""+result, Toast.LENGTH_LONG).show();
+//            Toast.makeText(getBaseContext(), ""+result, Toast.LENGTH_LONG).show();
+//
+            AlertDialog.Builder builder=new AlertDialog.Builder(Ballot.this);
+            builder.setTitle("Information!");
+            builder.setMessage(result);
+            builder.setNegativeButton("Ok", null);
+            builder.create();
+            builder.show();
 
             if(result.matches("(.*)Login Successfull(.*)")) {
 

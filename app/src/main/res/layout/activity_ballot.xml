@@ -46,6 +46,7 @@
                 android:layout_height="wrap_content"
                 android:textSize="20dp"
                 android:layout_marginLeft="10dp"
+                android:textStyle="bold"
 
                 android:textColor="#000000"
                 android:text="মির্জা রেজাউল করিম"
@@ -56,6 +57,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="ভোট দিন"
+                android:background="@drawable/btn_color_style"
+                style="@style/button_text"
 
                 android:layout_weight="1"
                 android:id="@+id/buttonreRezaul" />
@@ -82,6 +85,7 @@
                 android:layout_height="wrap_content"
                 android:textSize="20dp"
                 android:layout_marginLeft="10dp"
+                android:textStyle="bold"
                 android:layout_marginRight="5dp"
                 android:textColor="#000000"
                 android:text="প্রফেসর আব্দুল মান্নান"
@@ -93,6 +97,8 @@
                 android:layout_height="wrap_content"
                 android:text="ভোট দিন"
                android:gravity="center"
+                android:background="@drawable/btn_color_style"
+                style="@style/button_text"
 
 
                 android:layout_weight="1"
@@ -135,6 +141,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="5dp"
                 android:textColor="#000000"
+                android:textStyle="bold"
                 android:text="আব্দুর রহিম কালু"
                 android:layout_weight="3"
                 android:id="@+id/textViewKalu" />
@@ -143,6 +150,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="ভোট দিন"
+                android:background="@drawable/btn_color_style"
+                style="@style/button_text"
 
                 android:layout_weight="1"
                 android:id="@+id/buttonKalu" />
@@ -170,6 +179,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="5dp"
                 android:textColor="#000000"
+                android:textStyle="bold"
                 android:layout_weight="3"
                 android:text="এ্যাড. সাখায়াত হোসেন"
                 android:id="@+id/textViewShaka" />
@@ -178,6 +188,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="ভোট দিন"
+                android:background="@drawable/btn_color_style"
+                style="@style/button_text"
 
                 android:layout_weight="1"
                 android:id="@+id/buttonShaka" />

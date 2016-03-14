@@ -58,6 +58,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="ভোট দিন"
+
                 android:layout_weight="1"
                 android:id="@+id/buttonreBasar" />
         </LinearLayout>
@@ -94,6 +95,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="ভোট দিন"
+
                 android:gravity="center"
                 android:layout_weight="1"
                 android:id="@+id/buttonNazim" />

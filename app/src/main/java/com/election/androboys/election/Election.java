@@ -16,6 +16,7 @@ public class Election extends AppCompatActivity {
     TextView btn_polling_station;
     TextView btn_vote;
     TextView btn_Login;
+    TextView btn_Result;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +53,15 @@ public class Election extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
+
+        btn_Result.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(Election.this,result.class);
+                startActivity(i);
+            }
+        });
     }
 
 
@@ -60,6 +70,8 @@ public class Election extends AppCompatActivity {
         btn_polling_station= (TextView) findViewById(R.id.menu_polling);
         btn_vote= (TextView) findViewById(R.id.btn_vote);
         btn_Login= (TextView) findViewById(R.id.txtLogin);
+
+        btn_Result= (TextView) findViewById(R.id.btn_result);
     }
 
     @Override

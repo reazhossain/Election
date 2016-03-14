@@ -1,6 +1,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#E0E0E0"
     tools:context="com.election.androboys.election.Ballot">
 
 
@@ -28,6 +29,9 @@
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:weightSum="3"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/border"
+
             android:layout_height="match_parent">
 
             <ImageView
@@ -44,7 +48,7 @@
                 android:layout_marginLeft="10dp"
 
                 android:textColor="#000000"
-                android:text="মির্জা রেজাউল করিম(দুলাল)"
+                android:text="মির্জা রেজাউল করিম"
                 android:layout_weight="3"
                 android:id="@+id/textViewRezaul" />
 
@@ -52,6 +56,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="ভোট দিন"
+
                 android:layout_weight="1"
                 android:id="@+id/buttonreRezaul" />
         </LinearLayout>
@@ -62,6 +67,7 @@
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:weightSum="3"
+            android:background="@drawable/border"
             android:layout_height="match_parent">
 
             <ImageView
@@ -87,6 +93,8 @@
                 android:layout_height="wrap_content"
                 android:text="ভোট দিন"
                android:gravity="center"
+
+
                 android:layout_weight="1"
                 android:id="@+id/buttonMannan" />
         </LinearLayout>
@@ -110,6 +118,8 @@
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:weightSum="3"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/border"
             android:layout_height="match_parent">
 
             <ImageView
@@ -133,6 +143,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="ভোট দিন"
+
                 android:layout_weight="1"
                 android:id="@+id/buttonKalu" />
         </LinearLayout>
@@ -143,6 +154,7 @@
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:weightSum="3"
+            android:background="@drawable/border"
             android:layout_height="match_parent">
 
             <ImageView
@@ -166,6 +178,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="ভোট দিন"
+
                 android:layout_weight="1"
                 android:id="@+id/buttonShaka" />
         </LinearLayout>

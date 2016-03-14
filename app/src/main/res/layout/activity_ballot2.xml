@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#E0E0E0"
     tools:context="com.election.androboys.election.Ballot2">
 
 
@@ -21,6 +22,7 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="মেয়র"
             android:textStyle="bold"
+
             android:textSize="40dp"
             android:layout_gravity="center"
             android:id="@+id/textView3" />
@@ -31,6 +33,7 @@
             android:layout_width="match_parent"
             android:weightSum="3"
             android:layout_marginBottom="5dp"
+            android:background="@drawable/border"
             android:layout_height="match_parent">
 
             <ImageView
@@ -65,12 +68,14 @@
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:weightSum="3"
+            android:background="@drawable/border"
             android:layout_height="match_parent">
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/pakhi"
+                android:background="#ffffff"
 
                 android:id="@+id/imageViewMannan" />
 
@@ -113,6 +118,8 @@
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:weightSum="3"
+            android:background="@drawable/border"
+            android:layout_marginBottom="5dp"
             android:layout_height="match_parent">
 
             <ImageView
@@ -146,12 +153,14 @@
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:weightSum="3"
+            android:background="@drawable/border"
             android:layout_height="match_parent">
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/scissor"
+                android:background="#ffffff"
                 android:id="@+id/imageViewShaka" />
 
             <TextView

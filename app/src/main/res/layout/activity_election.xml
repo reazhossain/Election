@@ -97,6 +97,15 @@
                 android:text="@string/vote_rules"
                 android:textColor="#fdffff"
                 android:id="@+id/textView4" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="ফলাফল"
+                android:textColor="#fdffff"
+                android:id="@+id/btn_result" />
         </LinearLayout>
 
     </RelativeLayout>

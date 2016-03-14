@@ -1,5 +1,6 @@
 package com.election.androboys.election;
 
+import android.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -99,14 +100,24 @@ public class signup extends AppCompatActivity {
         @Override
         protected void onPostExecute(String result) {
             ////Toast.makeText(getBaseContext(), "Received!", Toast.LENGTH_LONG).show();
+            AlertDialog.Builder builder=new AlertDialog.Builder(signup.this);
+            builder.setTitle("Information!");
+
+
 
       if(result.matches("(.*)Registration Successfull(.*)")) {
-                Toast.makeText(getBaseContext(), "Registration Successful", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(getBaseContext(), "Registration Successful", Toast.LENGTH_SHORT).show();
+          builder.setMessage("Registration Successful.");
             }
 
             else {
-                Toast.makeText(getBaseContext(), "Problem In Registration", Toast.LENGTH_SHORT).show();
+          builder.setMessage("Problem In Registration.");
+
+//                Toast.makeText(getBaseContext(), "Problem In Registration", Toast.LENGTH_SHORT).show();
             }
+            builder.setNegativeButton("Ok", null);
+            builder.create();
+            builder.show();
 
 
         }

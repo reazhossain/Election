@@ -137,7 +137,7 @@ public class Ballot extends AppCompatActivity {
 //
             AlertDialog.Builder builder=new AlertDialog.Builder(Ballot.this);
             builder.setTitle("Information!");
-            builder.setMessage(result);
+            builder.setMessage(result+".");
             builder.setNegativeButton("Ok", null);
             builder.create();
             builder.show();

@@ -136,8 +136,8 @@ public class Ballot extends AppCompatActivity {
 //            Toast.makeText(getBaseContext(), ""+result, Toast.LENGTH_LONG).show();
 //
             AlertDialog.Builder builder=new AlertDialog.Builder(Ballot.this);
-            builder.setTitle("Information!");
-            builder.setMessage(result+".");
+            builder.setTitle("তথ্য!");
+            builder.setMessage(result);
             builder.setNegativeButton("Ok", null);
             builder.create();
             builder.show();

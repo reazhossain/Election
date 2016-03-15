@@ -133,8 +133,8 @@ public class Ballot2 extends AppCompatActivity {
         protected void onPostExecute(String result) {
 
             AlertDialog.Builder builder=new AlertDialog.Builder(Ballot2.this);
-            builder.setTitle("Information!");
-            builder.setMessage(result+".");
+            builder.setTitle("তথ্য!");
+            builder.setMessage(result);
             builder.setNegativeButton("Ok", null);
             builder.create();
             builder.show();

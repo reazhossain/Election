@@ -101,17 +101,17 @@ public class signup extends AppCompatActivity {
         protected void onPostExecute(String result) {
             ////Toast.makeText(getBaseContext(), "Received!", Toast.LENGTH_LONG).show();
             AlertDialog.Builder builder=new AlertDialog.Builder(signup.this);
-            builder.setTitle("Information!");
+            builder.setTitle("তথ্য!");
 
 
 
       if(result.matches("(.*)Registration Successfull(.*)")) {
 //                Toast.makeText(getBaseContext(), "Registration Successful", Toast.LENGTH_SHORT).show();
-          builder.setMessage("Registration Successful.");
+          builder.setMessage("নিবন্ধনটি সফল হয়েছে ।");
             }
 
             else {
-          builder.setMessage("Problem In Registration.");
+          builder.setMessage("নিবন্ধনটি সম্পন্ন হয়নি ।");
 
 //                Toast.makeText(getBaseContext(), "Problem In Registration", Toast.LENGTH_SHORT).show();
             }

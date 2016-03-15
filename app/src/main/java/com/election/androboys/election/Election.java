@@ -49,7 +49,7 @@ public class Election extends AppCompatActivity {
         btn_Login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i=new Intent(Election.this,Login.class);
+                Intent i=new Intent(Election.this,signup.class);
                 startActivity(i);
             }
         });

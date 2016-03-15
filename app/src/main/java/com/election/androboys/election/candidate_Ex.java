@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -23,6 +24,9 @@ import java.net.URLEncoder;
 
 public class candidate_Ex extends AppCompatActivity {
 
+ImageView profilepic;
+
+    ImageView markapic;
 
 
     TextView txt_result_show;
@@ -31,6 +35,8 @@ public class candidate_Ex extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_candidate__ex);
 
+        profilepic = (ImageView)findViewById(R.id.img1);
+        markapic = (ImageView)findViewById(R.id.img2);
 
         txt_result_show=(TextView) findViewById(R.id.txt_result);
 
@@ -39,6 +45,53 @@ public class candidate_Ex extends AppCompatActivity {
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
             value = extras.getString("name");
+
+
+if(value.equals("মির্জা রেজাউল করিম(দুলাল)"))
+{
+    profilepic.setImageResource(R.drawable.mirza);
+    markapic.setImageResource(R.drawable.jug);
+}
+
+else  if(value.equals("প্রফেসর আব্দুল মান্নান"))
+{
+    profilepic.setImageResource(R.drawable.mannan);
+    markapic.setImageResource(R.drawable.mobile);
+}
+
+else  if(value.equals("আব্দুর রহিম কালু"))
+{
+    profilepic.setImageResource(R.drawable.kalu);
+    markapic.setImageResource(R.drawable.bnp);
+}
+else  if(value.equals("এ্যাডভোকেট সাখায়াত হোসেন(সাখো)"))
+{
+    profilepic.setImageResource(R.drawable.shaku);
+    markapic.setImageResource(R.drawable.lig);
+}
+else  if(value.equals("মোঃ আবুল বাশার"))
+{
+    profilepic.setImageResource(R.drawable.bashar);
+    markapic.setImageResource(R.drawable.mosal);
+}
+else  if(value.equals("মোঃ নাজিম উদ্দিন মিয়া"))
+{
+    profilepic.setImageResource(R.drawable.najim);
+    markapic.setImageResource(R.drawable.pakhi);
+}
+else  if(value.equals("মোঃ রেজাউল করিম "))
+{
+    profilepic.setImageResource(R.drawable.karim);
+    markapic.setImageResource(R.drawable.lamp);
+}
+else  if(value.equals("মোছাঃ কামরুন্নাহার "))
+{
+    profilepic.setImageResource(R.drawable.nahar);
+    markapic.setImageResource(R.drawable.scissor);
+}
+
+
+
             String base;
             try {
                 base = URLEncoder.encode(value, "UTF-8");

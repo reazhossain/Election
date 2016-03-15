@@ -20,12 +20,12 @@
         android:layout_height="wrap_content">
 
         <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
             android:layout_gravity="center"
             android:layout_weight="2"
             android:src="@drawable/aaaaaaaaa"
-            android:id="@+id/imageView2" />
+            android:id="@+id/img1" />
 
         <ImageView
             android:layout_width="wrap_content"
@@ -33,7 +33,7 @@
             android:src="@drawable/aaaaaaaaa"
             android:layout_weight="1"
             android:layout_gravity="center"
-            android:id="@+id/imageView3" />
+            android:id="@+id/img2" />
     </LinearLayout>
 
     <LinearLayout

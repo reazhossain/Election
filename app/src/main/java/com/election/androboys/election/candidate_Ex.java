@@ -74,6 +74,11 @@ else  if(value.equals("মোঃ আবুল বাশার"))
     profilepic.setImageResource(R.drawable.bashar);
     markapic.setImageResource(R.drawable.mosal);
 }
+else  if(value.equals("মোছাঃ হাসিনা বেগম"))
+{
+    profilepic.setImageResource(R.drawable.nahar);
+    markapic.setImageResource(R.drawable.scissor);
+}
 else  if(value.equals("মোঃ নাজিম উদ্দিন মিয়া"))
 {
     profilepic.setImageResource(R.drawable.najim);

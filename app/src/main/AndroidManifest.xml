@@ -75,21 +75,21 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".Election" />
         </activity>
-        <activity android:name=".Ballot2"
-            android:label="ব্যালট পেপার"
-            >
+        <activity
+            android:name=".Ballot2"
+            android:label="ব্যালট পেপার">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".Election" />
         </activity>
-        <activity android:name=".result"
-            android:label="ফলাফল"
-            >
-
+        <activity
+            android:name=".result"
+            android:label="ফলাফল">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".Election" />
         </activity>
+        <activity android:name=".rules"></activity>
     </application>
 
 </manifest>

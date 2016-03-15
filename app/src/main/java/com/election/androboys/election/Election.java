@@ -17,6 +17,7 @@ public class Election extends AppCompatActivity {
     TextView btn_vote;
     TextView btn_Login;
     TextView btn_Result;
+    TextView btn_rules;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,6 +63,14 @@ public class Election extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
+        btn_rules.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(Election.this,rules.class);
+                startActivity(i);
+            }
+        });
     }
 
 
@@ -72,6 +81,7 @@ public class Election extends AppCompatActivity {
         btn_Login= (TextView) findViewById(R.id.txtLogin);
 
         btn_Result= (TextView) findViewById(R.id.btn_result);
+        btn_rules= (TextView) findViewById(R.id.btn_rules);
     }
 
     @Override

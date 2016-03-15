@@ -96,7 +96,7 @@
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="@string/vote_rules"
                 android:textColor="#fdffff"
-                android:id="@+id/textView4" />
+                android:id="@+id/btn_rules" />
 
             <TextView
                 android:layout_width="wrap_content"
